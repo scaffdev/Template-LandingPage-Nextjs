@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexusflow.id"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://nexusflow.id"),
   title: "NexusFlow — Platform Otomasi Cerdas & Workspace Bisnis Modern",
   description:
     "Tingkatkan efisiensi tim hingga 10x lebih cepat dengan NexusFlow. Platform otomasi alur kerja visual, integrasi 200+ aplikasi, dan analitik cerdas tanpa ribet.",

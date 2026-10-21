@@ -65,11 +65,11 @@ export default function ContactModal({ isOpen, onClose, defaultPlan }: ContactMo
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API call / client lead submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 900);
+    const subject = encodeURIComponent("Kontak dari website");
+    const body = encodeURIComponent(`Nama: ${formData.name}\nEmail: ${formData.email}\nTelepon: ${formData.phone}\n\nPesan: ${formData.message || "—"}`);
+    window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+    setIsSubmitting(false);
+    setIsSuccess(true);
   };
 
   const handleReset = () => {

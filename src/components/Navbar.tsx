@@ -32,7 +32,7 @@ export default function Navbar({ onOpenContact }: NavbarProps) {
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <a
-            href="#"
+            href="/"
             className="flex items-center gap-2.5 group transition"
             aria-label="Kembali ke beranda NexusFlow"
           >
